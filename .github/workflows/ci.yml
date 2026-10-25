@@ -78,7 +78,7 @@ jobs:
       - name: Image retention
         run: |
           set -euo pipefail
-          count="$(ls -1 dist/stats-*-macos-stats-*.dmg | wc -l)"
+          count="$(find dist -maxdepth 1 -name 'stats-*-macos-stats-*.dmg' | wc -l)"
           echo "versioned images in dist/: ${count}"
           test "${count}" -ge 1 || { echo "no versioned image"; exit 1; }
           test "${count}" -le 5 || { echo "more than five images kept"; exit 1; }
