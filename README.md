@@ -76,3 +76,11 @@ The last command must show `<Module>_state = 1` for every module you want. If th
 The app is written by Serhiy Mytrovtsiy and licensed under MIT; the image is the unmodified `v3.0.23` release. The source tree in [`upstream/`](upstream/) is the same tag, exported with `git archive`; provenance is documented in [`docs/upstream.md`](docs/upstream.md). The fork used for upstream work lives at <https://github.com/alkipp/stats>.
 
 See [`THIRD-PARTY.md`](THIRD-PARTY.md) and [`LICENSE`](LICENSE) for the scripts and docs of this repository.
+
+## Security
+
+Report vulnerabilities privately via GitHub: <https://github.com/alkipp/macos-stats/security/advisories/new>. Details and the status of known advisories are in [`SECURITY.md`](SECURITY.md).
+
+## Maintainer
+
+Alexander Kippar – <https://github.com/alkipp>. Source work lives in the fork <https://github.com/alkipp/stats>.
