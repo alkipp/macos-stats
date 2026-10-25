@@ -3,13 +3,13 @@
 # No sudo required, no network access.
 set -euo pipefail
 
-VERSION="3.0.23"
-SHA256="016517d559251f486aa0a47549de34c7dff56102392fa6273a58b0b2b815f392"
+APP_VERSION="3.0.23"
+APP_SHA256="016517d559251f486aa0a47549de34c7dff56102392fa6273a58b0b2b815f392"
 APP="/Applications/Stats.app"
 DOMAIN="eu.exelban.Stats"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DMG="${SCRIPT_DIR}/dist/stats-${VERSION}.dmg"
+DMG="${SCRIPT_DIR}/dist/stats-${APP_VERSION}.dmg"
 
 info() { printf '  %s\n' "$*"; }
 die() { printf 'Error: %s\n' "$*" >&2; exit 1; }
@@ -17,10 +17,10 @@ die() { printf 'Error: %s\n' "$*" >&2; exit 1; }
 [ "$(uname -s)" = "Darwin" ] || die "macOS only"
 [ -f "$DMG" ] || die "image not found: $DMG"
 
-printf 'Installing Stats %s\n' "$VERSION"
+printf 'Installing Stats %s\n' "$APP_VERSION"
 
 actual="$(shasum -a 256 "$DMG" | awk '{print $1}')"
-[ "$actual" = "$SHA256" ] || die "SHA-256 mismatch: expected $SHA256, got $actual"
+[ "$actual" = "$APP_SHA256" ] || die "SHA-256 mismatch: expected $APP_SHA256, got $actual"
 info "image verified (SHA-256 $actual)"
 
 # Quit the app first: Stats caches its settings at launch and would write the

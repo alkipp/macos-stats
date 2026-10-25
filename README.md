@@ -18,6 +18,10 @@
 
 ![Menu bar preview](assets/stats-preview-2026-10.png)
 
+## Versions
+
+This repository has its own version (`VERSION`, currently **1.0.0**) and ships a separate application version (`APP_VERSION` in `install.sh`, currently **3.0.23**). Both are released together: the tag is `v<repository version>`, the release notes name the app version. Rules in [`docs/versioning.md`](docs/versioning.md).
+
 ## Install
 
 ```bash
