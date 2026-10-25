@@ -27,6 +27,18 @@ The CI additionally checks that the version and SHA-256 pinned in `install.sh` m
 4. No secrets. Not in code, not in logs, not in commit messages. The installer never stores credentials.
 5. If a change alters behaviour, update the documentation in the same pull request.
 
+## Releasing
+
+1. Download the upstream release image and check notarisation:
+   `spctl -a -vvv --type install dist/stats-<version>.dmg`
+2. Record the checksum: `shasum -a 256 dist/stats-<version>.dmg`
+3. Update `VERSION` and `SHA256` at the top of `install.sh`. No other line may pin a version.
+4. Run `bash -n install.sh uninstall.sh`, `shellcheck install.sh uninstall.sh` and `./install.sh` on a Mac.
+5. Update `CHANGELOG.md`; touch `docs/module-keys.md` and `docs/upstream.md` if keys or the exported source tree changed.
+6. Push the branch, open the pull request, wait for the **Scripts and docs** check to pass.
+7. Tag the merged commit (`git tag -a v<version> -m "..."`, `git push origin v<version>`). The release workflow attaches the image and `SHA256SUMS.txt`.
+8. Verify the release page: both assets present, checksum identical to the local `shasum`.
+
 ## Commit messages
 
 Imperative subject line, up to about 70 characters, then a blank line and a body that explains *why*. Example:
