@@ -14,6 +14,8 @@
 | `docs/module-keys.md` | Modulschlüssel in `eu.exelban.Stats` |
 | `assets/` | Vorschau der Menüleiste (SVG-Quelle + PNG) |
 
+![Vorschau der Menüleiste](assets/stats-vorschau-2026-10.png)
+
 ## Installieren
 
 ```bash
