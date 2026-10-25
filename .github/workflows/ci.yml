@@ -66,11 +66,27 @@ jobs:
       - name: Pinned installer matches the shipped image
         run: |
           set -euo pipefail
-          version="$(grep -oE '^APP_VERSION="[^"]+"' install.sh | cut -d'"' -f2)"
+          app="$(grep -oE '^APP_VERSION="[^"]+"' install.sh | cut -d'"' -f2)"
+          repo="$(grep -oE '^REPO_VERSION="[^"]+"' install.sh | cut -d'"' -f2)"
           sha="$(grep -oE '^APP_SHA256="[^"]+"' install.sh | cut -d'"' -f2)"
-          echo "installer pins app version ${version} with ${sha}"
-          test -f "dist/stats-${version}.dmg" || { echo "shipped image missing"; exit 1; }
-          echo "${sha}  dist/stats-${version}.dmg" | sha256sum -c -
+          test "${repo}" = "$(cat VERSION)" || {
+            echo "REPO_VERSION ${repo} does not match VERSION $(cat VERSION)"; exit 1; }
+          file="dist/stats-${app}-macos-stats-${repo}.dmg"
+          test -f "${file}" || { echo "shipped image missing: ${file}"; exit 1; }
+          echo "${sha}  ${file}" | sha256sum -c -
+
+      - name: Image retention
+        run: |
+          set -euo pipefail
+          count="$(find dist -maxdepth 1 -name 'stats-*-macos-stats-*.dmg' | wc -l)"
+          echo "versioned images in dist/: ${count}"
+          test "${count}" -ge 1 || { echo "no versioned image"; exit 1; }
+          test "${count}" -le 5 || { echo "more than five images kept"; exit 1; }
+          if compgen -G "dist/stats-*.dmg" > /dev/null; then
+            for f in dist/stats-*.dmg; do
+              case "$f" in *-macos-stats-*) ;; *) echo "legacy unprefixed image: $f"; exit 1;; esac
+            done
+          fi
 
       - name: Workflow lint
         uses: raven-actions/actionlint@v2

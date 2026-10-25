@@ -28,6 +28,16 @@ $EDITOR CHANGELOG.md
 git add VERSION CHANGELOG.md
 ```
 
+## Image and retention
+
+The installer never refers to a bare app version. The image in `dist/` is named
+
+```text
+stats-<APP_VERSION>-macos-stats-<VERSION>.dmg
+```
+
+`scripts/package-dmg.sh` creates that file for the current `VERSION` and keeps the last **five** repository versions. Everything older is deleted, including the old unprefixed `stats-<app>.dmg`. The CI fails when there are more than five images or when a file does not follow the pattern.
+
 ## Releases
 
 A tag `vX.Y.Z` triggers `.github/workflows/release.yml`, which attaches `dist/*.dmg` and `SHA256SUMS.txt` to the release. The release is labelled with the repository version; the release notes state which app version the image contains.

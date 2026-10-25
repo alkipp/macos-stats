@@ -4,6 +4,13 @@ All notable changes to this repository. Format based on [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-10-25
+
+### Added
+
+- **Versioned image**: the DMG is named `stats-<app version>-macos-stats-<repository version>.dmg`, created by `scripts/package-dmg.sh`, and referenced by the installer through `REPO_VERSION`.
+- **Retention**: at most five images stay in `dist/`; older ones are removed, and the unprefixed legacy image is dropped. CI fails if the count or the naming pattern drifts.
+
 ## [1.0.0] - 2026-10-25
 
 ### Added

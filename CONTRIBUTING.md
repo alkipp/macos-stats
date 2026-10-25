@@ -33,11 +33,12 @@ The CI additionally checks that the version and SHA-256 pinned in `install.sh` m
    `spctl -a -vvv --type install dist/stats-<version>.dmg`
 2. Record the checksum: `shasum -a 256 dist/stats-<version>.dmg`
 3. Update `VERSION` and `SHA256` at the top of `install.sh`. No other line may pin a version.
-4. Run `bash -n install.sh uninstall.sh`, `shellcheck install.sh uninstall.sh` and `./install.sh` on a Mac.
-5. Update `CHANGELOG.md`; touch `docs/module-keys.md` and `docs/upstream.md` if keys or the exported source tree changed.
-6. Push the branch, open the pull request, wait for the **Scripts and docs** check to pass.
-7. Tag the merged commit (`git tag -a v<version> -m "..."`, `git push origin v<version>`). The release workflow attaches the image and `SHA256SUMS.txt`.
-8. Verify the release page: both assets present, checksum identical to the local `shasum`.
+4. Run `bash scripts/package-dmg.sh` – it names the image after both versions and applies the five-version retention.
+5. Run `bash -n install.sh uninstall.sh`, `shellcheck install.sh uninstall.sh` and `./install.sh` on a Mac.
+6. Update `CHANGELOG.md`; touch `docs/module-keys.md` and `docs/upstream.md` if keys or the exported source tree changed.
+7. Push the branch, open the pull request, wait for the **Version** and **Scripts and docs** checks to pass.
+8. Tag the merged commit (`git tag -a v<version> -m "..."`, `git push origin v<version>`). The release workflow attaches the image and `SHA256SUMS.txt`.
+9. Verify the release page: both assets present, checksum identical to the local `shasum`.
 
 ## Commit messages
 

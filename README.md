@@ -8,7 +8,7 @@
 
 | Path | Purpose |
 |---|---|
-| `dist/stats-3.0.23.dmg` | Official release image, unmodified, SHA-256 verified |
+| `dist/stats-3.0.23-macos-stats-1.1.0.dmg` | Official release image, unmodified, SHA-256 verified |
 | `install.sh` | Verify the image, install the app, enable modules, start it |
 | `uninstall.sh` | Remove app, preferences and program data |
 | `docs/module-keys.md` | Module keys inside `eu.exelban.Stats` |
