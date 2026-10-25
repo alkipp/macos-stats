@@ -31,7 +31,7 @@ The CI additionally checks that the version and SHA-256 pinned in `install.sh` m
 
 Imperative subject line, up to about 70 characters, then a blank line and a body that explains *why*. Example:
 
-```
+```text
 Verify the pinned image in CI
 
 The installer trusts a hard-coded checksum, so a replaced image would go
