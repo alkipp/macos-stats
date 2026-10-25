@@ -4,12 +4,13 @@
 set -euo pipefail
 
 APP_VERSION="3.0.23"
+REPO_VERSION="1.1.0"
 APP_SHA256="016517d559251f486aa0a47549de34c7dff56102392fa6273a58b0b2b815f392"
 APP="/Applications/Stats.app"
 DOMAIN="eu.exelban.Stats"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DMG="${SCRIPT_DIR}/dist/stats-${APP_VERSION}.dmg"
+DMG="${SCRIPT_DIR}/dist/stats-${APP_VERSION}-macos-stats-${REPO_VERSION}.dmg"
 
 info() { printf '  %s\n' "$*"; }
 die() { printf 'Error: %s\n' "$*" >&2; exit 1; }
