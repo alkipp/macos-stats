@@ -16,6 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - name: Read versions
+        id: v
+        run: |
+          echo "repo=$(cat VERSION)" >> "$GITHUB_OUTPUT"
+          echo "app=$(grep -oE '^APP_VERSION="[^"]+"' install.sh | cut -d'"' -f2)" >> "$GITHUB_OUTPUT"
+
       - name: Checksums
         run: |
           set -euo pipefail
@@ -26,6 +32,11 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v3
         with:
+          name: "macos-stats ${{ steps.v.outputs.repo }} – Stats ${{ steps.v.outputs.app }}"
+          body: |
+            Packages Stats ${{ steps.v.outputs.app }} for a macOS host: pinned image, installer, module key reference and provenance notes.
+
+            Repository version: ${{ steps.v.outputs.repo }}. See `CHANGELOG.md` for what changed.
           files: |
             dist/*.dmg
             dist/SHA256SUMS.txt

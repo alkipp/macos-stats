@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches: [main]
+    tags: ["v*"]
   pull_request:
   workflow_dispatch:
 
@@ -10,6 +11,46 @@ permissions:
   contents: read
 
 jobs:
+  version:
+    name: Version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Read VERSION
+        id: v
+        run: echo "value=$(cat VERSION)" >> "$GITHUB_OUTPUT"
+
+      - name: Semantic version format
+        run: |
+          grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' VERSION || {
+            echo "VERSION must be MAJOR.MINOR.PATCH, found: $(cat VERSION)"; exit 1; }
+
+      - name: Changelog entry for this version
+        run: |
+          grep -q "^## \[${{ steps.v.outputs.value }}\]" CHANGELOG.md || {
+            echo "CHANGELOG.md has no '## [${{ steps.v.outputs.value }}]' section"; exit 1; }
+
+      - name: Version bumped against the base branch
+        if: github.event_name == 'pull_request'
+        run: |
+          set -euo pipefail
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+          base="$(git show FETCH_HEAD:VERSION 2>/dev/null || echo none)"
+          echo "base=$base head=${{ steps.v.outputs.value }}"
+          if [ "$base" = "${{ steps.v.outputs.value }}" ]; then
+            echo "VERSION was not bumped - every change needs its own version"
+            exit 1
+          fi
+
+      - name: Tag matches VERSION
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          test "${GITHUB_REF_NAME}" = "v${{ steps.v.outputs.value }}" || {
+            echo "tag ${GITHUB_REF_NAME} does not match VERSION v${{ steps.v.outputs.value }}"; exit 1; }
+
   scripts:
     name: Scripts and docs
     runs-on: ubuntu-latest
@@ -25,9 +66,9 @@ jobs:
       - name: Pinned installer matches the shipped image
         run: |
           set -euo pipefail
-          version="$(grep -oE '^VERSION="[^"]+"' install.sh | cut -d'"' -f2)"
-          sha="$(grep -oE '^SHA256="[^"]+"' install.sh | cut -d'"' -f2)"
-          echo "installer pins version ${version} with ${sha}"
+          version="$(grep -oE '^APP_VERSION="[^"]+"' install.sh | cut -d'"' -f2)"
+          sha="$(grep -oE '^APP_SHA256="[^"]+"' install.sh | cut -d'"' -f2)"
+          echo "installer pins app version ${version} with ${sha}"
           test -f "dist/stats-${version}.dmg" || { echo "shipped image missing"; exit 1; }
           echo "${sha}  dist/stats-${version}.dmg" | sha256sum -c -
 
