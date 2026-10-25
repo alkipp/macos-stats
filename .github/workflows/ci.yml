@@ -25,8 +25,8 @@ jobs:
       - name: Pinned installer matches the shipped image
         run: |
           set -euo pipefail
-          version="$(grep -oE 'STATS_VERSION="[^"]+"' install.sh | cut -d'"' -f2)"
-          sha="$(grep -oE 'STATS_SHA256="[^"]+"' install.sh | cut -d'"' -f2)"
+          version="$(grep -oE '^VERSION="[^"]+"' install.sh | cut -d'"' -f2)"
+          sha="$(grep -oE '^SHA256="[^"]+"' install.sh | cut -d'"' -f2)"
           echo "installer pins version ${version} with ${sha}"
           test -f "dist/stats-${version}.dmg" || { echo "shipped image missing"; exit 1; }
           echo "${sha}  dist/stats-${version}.dmg" | sha256sum -c -
