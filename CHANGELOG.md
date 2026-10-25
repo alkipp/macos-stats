@@ -4,6 +4,12 @@ All notable changes to this repository. Format based on [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-10-25
+
+### Fixed
+
+- The release attached every image in `dist/` instead of the one for its version. The workflow now selects `stats-<app>-macos-stats-<VERSION>.dmg` and checksums only that file.
+
 ## [1.2.0] - 2026-10-25
 
 ### Added
