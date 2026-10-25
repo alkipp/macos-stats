@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Entfernt Stats, seine Einstellungen und die Programmdaten.
+# Removes Stats together with its preferences and program data.
 set -euo pipefail
 
 APP="/Applications/Stats.app"
@@ -14,16 +14,16 @@ pkill -x Stats >/dev/null 2>&1 || true
 
 if [ -d "$APP" ]; then
   rm -rf "$APP"
-  info "entfernt: $APP"
+  info "removed: $APP"
 fi
 
 defaults delete "$DOMAIN" >/dev/null 2>&1 || true
-info "Einstellungen geloescht ($DOMAIN)"
+info "preferences deleted ($DOMAIN)"
 
 if [ -d "$SUPPORT" ]; then
   rm -rf "$SUPPORT"
-  info "entfernt: $SUPPORT"
+  info "removed: $SUPPORT"
 fi
 
-printf 'Fertig. Ein Eintrag unter Systemeinstellungen > Allgemein > Anmeldeobjekte kann\n'
-printf 'restlos entfernt werden, falls die App den Autostart-Helfer registriert hatte.\n'
+printf 'Done. If the app registered a launch-at-login helper, remove the leftover\n'
+printf 'entry under System Settings > General > Login Items.\n'

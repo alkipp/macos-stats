@@ -1,39 +1,39 @@
-# Modulschlüssel
+# Module keys
 
-*Stats speichert alles in `eu.exelban.Stats` (UserDefaults). Zwei Schlüssel je Modul entscheiden, ob und wie es in der Menüleiste erscheint.*
+*Stats stores everything in `eu.exelban.Stats` (UserDefaults). Two keys per module decide whether and how it shows up in the menu bar.*
 
-## Zustand
+## State
 
-| Schlüssel | Typ | Bedeutung |
+| Key | Type | Meaning |
 |---|---|---|
-| `<Modul>_state` | Bool | Modul aktiv (Icon erscheint) |
-| `<Modul>_widget` | String | Aktive Widget-Form, mehrere durch Komma getrennt |
-| `<Modul>_<widget>_position` | Int | Reihenfolge des Icons in der Menüleiste |
-| `temperature_units` | String | `celsius`, `fahrenheit` oder `system` |
-| `dockIcon` | Bool | Zusätzliches Dock-Icon |
-| `keep_menubar_positions` | Bool | Positionen beim Start beibehalten |
-| `pause` | Bool | Alle Module pausiert |
+| `<Module>_state` | Bool | Module enabled (icon appears) |
+| `<Module>_widget` | String | Active widget types, comma separated |
+| `<Module>_<widget>_position` | Int | Icon order in the menu bar |
+| `temperature_units` | String | `celsius`, `fahrenheit` or `system` |
+| `dockIcon` | Bool | Show an additional Dock icon |
+| `keep_menubar_positions` | Bool | Keep icon positions across launches |
+| `pause` | Bool | Pause all modules |
 
-Modulnamen: `CPU`, `GPU`, `RAM`, `Disk`, `Network`, `Clock`, `Sensors`, `Battery`, `Bluetooth`, `Remote`.
+Module names: `CPU`, `GPU`, `RAM`, `Disk`, `Network`, `Clock`, `Sensors`, `Battery`, `Bluetooth`, `Remote`.
 
-## Widget-Formen
+## Widget types
 
-Die Werte in `<Modul>_widget` stammen aus dem `config.plist` des jeweiligen Moduls. Üblich sind:
+Values in `<Module>_widget` come from each module's `config.plist`. Common ones:
 
-| Form | Darstellung |
+| Type | Rendering |
 |---|---|
-| `line_chart` | Verlaufsgraph über die Zeit |
-| `bar_chart` | Balken mit aktuellem Prozentwert |
-| `mini` | Kleiner Graph ohne Beschriftung |
-| `speed` | Up-/Down-Rate als Text |
-| `label` | Reiner Zahlenwert |
-| `pie_chart` | Kreisdiagramm |
-| `tachometer` | Zeigerinstrument |
-| `memory` | Belegung als Speicherblock |
+| `line_chart` | history graph over time |
+| `bar_chart` | bar with the current percentage |
+| `mini` | small chart without a label |
+| `speed` | up/down throughput as text |
+| `label` | plain number |
+| `pie_chart` | pie chart |
+| `tachometer` | dial gauge |
+| `memory` | memory blocks |
 
-Gemessene Belegung nach der Installation auf dem Mac mini (M2 Pro):
+Measured on the Mac mini (M2 Pro) after installation:
 
-| Modul | `*_state` | `*_widget` |
+| Module | `*_state` | `*_widget` |
 |---|---|---|
 | CPU | 1 | `line_chart` |
 | GPU | 1 | `mini` |
@@ -41,8 +41,8 @@ Gemessene Belegung nach der Installation auf dem Mac mini (M2 Pro):
 | Disk | 1 | `bar_chart` |
 | Network | 1 | `speed` |
 | Sensors | 1 | `label` |
-| Clock | 1 | Uhrzeit-Widget |
+| Clock | 1 | clock widget |
 
-## Reihenfolge beachten
+## Mind the order
 
-Stats liest die Defaults beim Start in einen Cache (`Store`) und schreibt bei Änderungen sofort zurück. Wer Schlüssel per `defaults write` setzt, muss die App **vorher beenden** – sonst überschreibt sie beim Beenden die neuen Werte. Genau das macht `install.sh`.
+Stats reads the defaults into a cache (`Store`) at launch and writes changes back immediately. Anyone setting keys with `defaults write` must **quit the app first** – otherwise it overwrites the new values on exit. That is exactly what `install.sh` does.

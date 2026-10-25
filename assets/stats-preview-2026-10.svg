@@ -16,63 +16,63 @@
 
   <rect x="0" y="0" width="2400" height="1180" fill="url(#bg)"/>
 
-  <!-- Menüleiste -->
+  <!-- Menu bar -->
   <rect x="0" y="0" width="2400" height="48" fill="#1c1c20"/>
   <rect x="0" y="47" width="2400" height="1" fill="#2e2e34"/>
 
   <text x="26" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#f2f2f7">Finder</text>
-  <text x="112" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Ablage</text>
-  <text x="184" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Bearbeiten</text>
-  <text x="292" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Darstellung</text>
-  <text x="412" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Gehe zu</text>
-  <text x="500" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Fenster</text>
-  <text x="574" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Hilfe</text>
+  <text x="112" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">File</text>
+  <text x="168" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Edit</text>
+  <text x="220" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">View</text>
+  <text x="278" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Go</text>
+  <text x="320" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Window</text>
+  <text x="400" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#d8d8de">Help</text>
 
-  <!-- Stats-Modul: CPU -->
+  <!-- Stats module: CPU -->
   <rect x="1690" y="19" width="3" height="5" fill="#32d74b"/>
   <rect x="1695" y="14" width="3" height="10" fill="#32d74b"/>
   <rect x="1700" y="9" width="3" height="15" fill="#32d74b"/>
-  <text x="1712" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">12 %</text>
+  <text x="1712" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">12%</text>
 
-  <!-- Stats-Modul: GPU -->
+  <!-- Stats module: GPU -->
   <rect x="1776" y="19" width="3" height="5" fill="#0a84ff"/>
   <rect x="1781" y="16" width="3" height="8" fill="#0a84ff"/>
   <rect x="1786" y="21" width="3" height="3" fill="#0a84ff"/>
-  <text x="1798" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">3 %</text>
+  <text x="1798" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">3%</text>
 
-  <!-- Stats-Modul: RAM -->
+  <!-- Stats module: RAM -->
   <rect x="1852" y="12" width="16" height="16" rx="3" fill="none" stroke="#ff9f0a" stroke-width="1.6"/>
   <rect x="1855" y="15" width="10" height="10" rx="1.5" fill="#ff9f0a"/>
-  <text x="1876" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">68 %</text>
+  <text x="1876" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">68%</text>
 
-  <!-- Stats-Modul: Netzwerk -->
+  <!-- Stats module: Netzwerk -->
   <rect x="1948" y="26" width="3" height="4" fill="#30d158"/>
   <rect x="1953" y="22" width="3" height="8" fill="#30d158"/>
   <rect x="1958" y="17" width="3" height="13" fill="#30d158"/>
-  <text x="1970" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">1,2 MB/s</text>
+  <text x="1970" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">1.2 MB/s</text>
 
-  <!-- Stats-Modul: Disk -->
+  <!-- Stats module: Disk -->
   <circle cx="2080" cy="17" r="7" fill="none" stroke="#bf5af2" stroke-width="1.6"/>
   <circle cx="2080" cy="17" r="3" fill="#bf5af2"/>
-  <text x="2094" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">72 %</text>
+  <text x="2094" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">72%</text>
 
-  <!-- Stats-Modul: Sensoren -->
+  <!-- Stats module: Sensoren -->
   <rect x="2160" y="16" width="5" height="15" rx="2.5" fill="#ff453a"/>
   <circle cx="2162.5" cy="31" r="4" fill="#ff453a"/>
   <text x="2174" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">41 °C</text>
 
-  <!-- Stats-Modul: Uhr -->
+  <!-- Stats module: Uhr -->
   <text x="2300" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#f2f2f7">16:10</text>
 
-  <!-- Popover CPU -->
+  <!-- CPU popover -->
   <rect x="240" y="150" width="880" height="790" rx="26" fill="#000000" opacity="0.4"/>
   <rect x="240" y="140" width="880" height="790" rx="26" fill="#1e1e23" stroke="#34343a" stroke-width="1.5"/>
 
   <text x="280" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#f2f2f7">CPU</text>
-  <text x="1080" y="196" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Menüleiste: 12 %</text>
+  <text x="1080" y="196" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Menu bar: 12%</text>
 
-  <text x="280" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="bold" fill="#32d74b">12 %</text>
-  <text x="282" y="340" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" fill="#98989d">System 4 % · Benutzer 8 % · 10 Kerne (6 P + 4 E)</text>
+  <text x="280" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="bold" fill="#32d74b">12%</text>
+  <text x="282" y="340" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" fill="#98989d">System 4% · User 8% · 10 cores (6 P + 4 E)</text>
 
   <rect x="280" y="360" width="800" height="110" rx="14" fill="#15151a" stroke="#28282f" stroke-width="1"/>
   <line x1="280" y1="415" x2="1080" y2="415" stroke="#2a2a31" stroke-width="1"/>
@@ -80,91 +80,91 @@
   <polygon fill="url(#cpuArea)" points="280,470 280,445 322,439 364,449 406,431 448,421 490,428 532,411 574,417 616,435 658,442 700,448 742,436 784,427 826,432 868,443 910,450 952,455 994,457 1036,453 1078,456 1078,470"/>
   <polyline fill="none" stroke="#32d74b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="280,445 322,439 364,449 406,431 448,421 490,428 532,411 574,417 616,435 658,442 700,448 742,436 784,427 826,432 868,443 910,450 952,455 994,457 1036,453 1078,456"/>
 
-  <text x="280" y="524" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#f2f2f7">Pro Kern</text>
+  <text x="280" y="524" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#f2f2f7">Per core</text>
   <text x="1080" y="524" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#6e6e76">P = Performance · E = Efficiency</text>
 
   <text x="280" y="566" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">P1</text>
   <rect x="280" y="572" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="280" y="572" width="19.8" height="10" rx="5" fill="#32d74b"/>
-  <text x="398" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">18 %</text>
+  <text x="398" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">18%</text>
 
   <text x="440" y="566" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">P2</text>
   <rect x="440" y="572" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="440" y="572" width="9.9" height="10" rx="5" fill="#32d74b"/>
-  <text x="558" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">9 %</text>
+  <text x="558" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">9%</text>
 
   <text x="600" y="566" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">P3</text>
   <rect x="600" y="572" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="600" y="572" width="23.1" height="10" rx="5" fill="#32d74b"/>
-  <text x="718" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">21 %</text>
+  <text x="718" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">21%</text>
 
   <text x="760" y="566" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">P4</text>
   <rect x="760" y="572" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="760" y="572" width="6.6" height="10" rx="5" fill="#32d74b"/>
-  <text x="878" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">6 %</text>
+  <text x="878" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">6%</text>
 
   <text x="920" y="566" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">P5</text>
   <rect x="920" y="572" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="920" y="572" width="15.4" height="10" rx="5" fill="#32d74b"/>
-  <text x="1038" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">14 %</text>
+  <text x="1038" y="581" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">14%</text>
 
   <text x="280" y="626" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">P6</text>
   <rect x="280" y="632" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="280" y="632" width="12.1" height="10" rx="5" fill="#32d74b"/>
-  <text x="398" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">11 %</text>
+  <text x="398" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">11%</text>
 
   <text x="440" y="626" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">E1</text>
   <rect x="440" y="632" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="440" y="632" width="5.5" height="10" rx="5" fill="#26a13a"/>
-  <text x="558" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">5 %</text>
+  <text x="558" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">5%</text>
 
   <text x="600" y="626" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">E2</text>
   <rect x="600" y="632" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="600" y="632" width="3.3" height="10" rx="5" fill="#26a13a"/>
-  <text x="718" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">3 %</text>
+  <text x="718" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">3%</text>
 
   <text x="760" y="626" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">E3</text>
   <rect x="760" y="632" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="760" y="632" width="4.4" height="10" rx="5" fill="#26a13a"/>
-  <text x="878" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">4 %</text>
+  <text x="878" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">4%</text>
 
   <text x="920" y="626" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#98989d">E4</text>
   <rect x="920" y="632" width="110" height="10" rx="5" fill="#33333a"/>
   <rect x="920" y="632" width="2.2" height="10" rx="5" fill="#26a13a"/>
-  <text x="1038" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">2 %</text>
+  <text x="1038" y="641" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#98989d">2%</text>
 
   <rect x="280" y="676" width="800" height="1" fill="#2e2e34"/>
 
   <text x="280" y="714" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">Load</text>
-  <text x="280" y="738" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#f2f2f7">1,42  1,31  1,18</text>
-  <text x="520" y="714" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">Takt</text>
-  <text x="520" y="738" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#f2f2f7">3,49 GHz</text>
-  <text x="760" y="714" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">Prozesse</text>
+  <text x="280" y="738" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#f2f2f7">1.42  1.31  1.18</text>
+  <text x="520" y="714" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">Frequency</text>
+  <text x="520" y="738" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#f2f2f7">3.49 GHz</text>
+  <text x="760" y="714" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">Processes</text>
   <text x="760" y="738" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#f2f2f7">512</text>
   <text x="940" y="714" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">Uptime</text>
   <text x="940" y="738" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#f2f2f7">3 T 07:12</text>
 
   <rect x="280" y="764" width="800" height="1" fill="#2e2e34"/>
 
-  <text x="280" y="798" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#f2f2f7">Häufigste Prozesse</text>
-  <text x="1080" y="798" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">nach CPU-Zeit</text>
+  <text x="280" y="798" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#f2f2f7">Top processes</text>
+  <text x="1080" y="798" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">by CPU time</text>
 
   <text x="280" y="834" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">kernel_task</text>
-  <text x="1080" y="834" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">4,2 %</text>
+  <text x="1080" y="834" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">4,2%</text>
   <text x="280" y="866" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">WindowServer</text>
-  <text x="1080" y="866" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">3,1 %</text>
+  <text x="1080" y="866" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">3,1%</text>
   <text x="280" y="898" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">llama-server</text>
-  <text x="1080" y="898" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">2,8 %</text>
+  <text x="1080" y="898" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">2,8%</text>
 
-  <!-- Popover GPU -->
+  <!-- GPU popover -->
   <rect x="1280" y="150" width="880" height="790" rx="26" fill="#000000" opacity="0.4"/>
   <rect x="1280" y="140" width="880" height="790" rx="26" fill="#1e1e23" stroke="#34343a" stroke-width="1.5"/>
 
   <text x="1320" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#f2f2f7">GPU</text>
-  <text x="2120" y="196" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Menüleiste: 3 %</text>
+  <text x="2120" y="196" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Menu bar: 3%</text>
 
-  <text x="1320" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="bold" fill="#0a84ff">3 %</text>
-  <text x="1322" y="340" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" fill="#98989d">Device-Auslastung · 16 GPU-Kerne</text>
+  <text x="1320" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="bold" fill="#0a84ff">3%</text>
+  <text x="1322" y="340" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" fill="#98989d">Device utilization · 16 GPU cores</text>
 
   <rect x="1320" y="360" width="800" height="110" rx="14" fill="#15151a" stroke="#28282f" stroke-width="1"/>
   <line x1="1320" y1="415" x2="2120" y2="415" stroke="#2a2a31" stroke-width="1"/>
@@ -175,30 +175,30 @@
   <rect x="1320" y="520" width="800" height="1" fill="#2e2e34"/>
 
   <text x="1320" y="558" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#98989d">Device</text>
-  <text x="2120" y="558" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#f2f2f7">3 %</text>
+  <text x="2120" y="558" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#f2f2f7">3%</text>
   <text x="1320" y="604" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#98989d">Renderer</text>
-  <text x="2120" y="604" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#f2f2f7">2 %</text>
+  <text x="2120" y="604" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#f2f2f7">2%</text>
   <text x="1320" y="650" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#98989d">Tiler</text>
-  <text x="2120" y="650" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#f2f2f7">0 %</text>
+  <text x="2120" y="650" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#f2f2f7">0%</text>
 
-  <text x="1320" y="700" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">Unified Memory (belegt / gesamt)</text>
+  <text x="1320" y="700" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#6e6e76">Unified memory (used / total)</text>
   <rect x="1320" y="712" width="800" height="12" rx="6" fill="#33333a"/>
   <rect x="1320" y="712" width="404" height="12" rx="6" fill="#0a84ff"/>
-  <text x="1320" y="756" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">GPU-Speicher</text>
-  <text x="2120" y="756" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">8,07 GB von 16 GB</text>
+  <text x="1320" y="756" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">GPU memory</text>
+  <text x="2120" y="756" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">8.07 GB of 16 GB</text>
 
   <rect x="1320" y="786" width="800" height="1" fill="#2e2e34"/>
 
-  <text x="1320" y="824" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Temperatur</text>
+  <text x="1320" y="824" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Temperature</text>
   <text x="2120" y="824" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">41 °C</text>
-  <text x="1320" y="862" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Takt</text>
-  <text x="2120" y="862" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">1,38 GHz</text>
-  <text x="1320" y="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Leistung (Watt)</text>
-  <text x="2120" y="900" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#6e6e76">nur mit root (powermetrics)</text>
+  <text x="1320" y="862" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Frequency</text>
+  <text x="2120" y="862" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">1.38 GHz</text>
+  <text x="1320" y="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#98989d">Power (W)</text>
+  <text x="2120" y="900" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#6e6e76">root only (powermetrics)</text>
 
-  <!-- Legende -->
+  <!-- Legend -->
   <rect x="240" y="970" width="1920" height="80" rx="18" fill="#15151a" stroke="#2a2a31" stroke-width="1"/>
-  <text x="280" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#98989d">Module in der Menüleiste – je ein Icon, Klick öffnet das Popover:</text>
+  <text x="280" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#98989d">Modules in the menu bar – one icon each, click to open the popover:</text>
 
   <circle cx="1004" cy="1010" r="7" fill="#32d74b"/>
   <text x="1020" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">CPU</text>
@@ -209,13 +209,13 @@
   <circle cx="1360" cy="1010" r="7" fill="#bf5af2"/>
   <text x="1376" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">Disk</text>
   <circle cx="1488" cy="1010" r="7" fill="#30d158"/>
-  <text x="1504" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">Netzwerk</text>
+  <text x="1504" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">Network</text>
   <circle cx="1660" cy="1010" r="7" fill="#ff453a"/>
-  <text x="1676" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">Sensoren</text>
+  <text x="1676" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">Sensors</text>
   <circle cx="1828" cy="1010" r="7" fill="#98989d"/>
-  <text x="1844" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">Uhr</text>
+  <text x="1844" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#f2f2f7">Clock</text>
 
-  <!-- Fußzeile -->
-  <text x="240" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#6e6e76">Vorschau (Mockup) – Beispielwerte, keine Messung.</text>
-  <text x="2160" y="1102" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#6e6e76">Stats 3.0.x · Mac mini M2 Pro (10 CPU- / 16 GPU-Kerne) · macOS 27.0.1</text>
+  <!-- Footer -->
+  <text x="240" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#6e6e76">Preview (mockup) – sample values, not a measurement.</text>
+  <text x="2160" y="1102" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#6e6e76">Stats 3.0.x · Mac mini M2 Pro (10 CPU / 16 GPU cores) · macOS 27.0.1</text>
 </svg>

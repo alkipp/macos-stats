@@ -1,17 +1,17 @@
-# Third-Party
+# Third-party
 
 ## Stats
 
-- Projekt: <https://github.com/exelban/stats>
-- Autor: Serhiy Mytrovtsiy
-- Lizenz: MIT (siehe <https://github.com/exelban/stats/blob/master/LICENSE>)
-- Eingebundene Datei: `dist/stats-3.0.23.dmg`
-- Herkunft: offizielles Release <https://github.com/exelban/stats/releases/tag/v3.0.23>, unverändert übernommen
-- Prüfsumme: `016517d559251f486aa0a47549de34c7dff56102392fa6273a58b0b2b815f392` (SHA-256, 7.841.781 Bytes)
-- Signatur: `Developer ID Application: Serhiy Mytrovtsiy (RP2S87B72W)`, notarisiert
+- Project: <https://github.com/exelban/stats>
+- Author: Serhiy Mytrovtsiy
+- License: MIT (see <https://github.com/exelban/stats/blob/master/LICENSE>)
+- Bundled file: `dist/stats-3.0.23.dmg`
+- Source: official release <https://github.com/exelban/stats/releases/tag/v3.0.23>, redistributed unmodified
+- Checksum: `016517d559251f486aa0a47549de34c7dff56102392fa6273a58b0b2b815f392` (SHA-256, 7,841,781 bytes)
+- Signature: `Developer ID Application: Serhiy Mytrovtsiy (RP2S87B72W)`, notarized
 
-Das Image wird hier ausschließlich als Installationsmedium für ein eigenes Gerät weitergegeben. Rechte an der App liegen beim Autor; dieses Repo ändert sie nicht und enthält keinen Quellcode daraus.
+The image is redistributed purely as an installation medium for a single device. All rights to the app remain with the author; this repository does not modify it and ships no source code from it.
 
-## Lizenz dieses Repos
+## License of this repository
 
-Skripte und Dokumentation stehen unter MIT, siehe [`LICENSE`](LICENSE). Diese Lizenz erstreckt sich nicht auf die Anwendung Stats in `dist/`; dort gilt die Lizenz des Autors.
+Scripts and documentation are MIT licensed, see [`LICENSE`](LICENSE). That license does not extend to the Stats application in `dist/`; the author's license applies there.
