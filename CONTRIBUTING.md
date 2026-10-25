@@ -38,7 +38,7 @@ The CI additionally checks that the version and SHA-256 pinned in `install.sh` m
 6. Update `CHANGELOG.md`; touch `docs/module-keys.md` and `docs/upstream.md` if keys or the exported source tree changed.
 7. Push the branch, open the pull request, wait for the **Version** and **Scripts and docs** checks to pass.
 8. Tag the merged commit (`git tag -a v<version> -m "..."`, `git push origin v<version>`). The release workflow attaches the image and `SHA256SUMS.txt`.
-9. Verify the release page: both assets present, checksum identical to the local `shasum`.
+9. Verify the release page: both assets present, checksum identical to the local `shasum`, and only five releases listed.
 
 ## Commit messages
 
