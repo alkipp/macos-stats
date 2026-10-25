@@ -12,6 +12,8 @@
 | `install.sh` | Verify the image, install the app, enable modules, start it |
 | `uninstall.sh` | Remove app, preferences and program data |
 | `docs/module-keys.md` | Module keys inside `eu.exelban.Stats` |
+| `docs/upstream.md` | Provenance of the vendored source tree |
+| `upstream/` | Unmodified source of `v3.0.23` (Swift, MIT) |
 | `assets/` | Menu bar preview (SVG source + PNG) |
 
 ![Menu bar preview](assets/stats-preview-2026-10.png)
@@ -71,4 +73,6 @@ The last command must show `<Module>_state = 1` for every module you want. If th
 
 ## Origin and license
 
-The app is written by Serhiy Mytrovtsiy and licensed under MIT; the image is the unmodified `v3.0.23` release. See [`THIRD-PARTY.md`](THIRD-PARTY.md) and [`LICENSE`](LICENSE) for the scripts and docs of this repository.
+The app is written by Serhiy Mytrovtsiy and licensed under MIT; the image is the unmodified `v3.0.23` release. The source tree in [`upstream/`](upstream/) is the same tag, exported with `git archive`; provenance is documented in [`docs/upstream.md`](docs/upstream.md). The fork used for upstream work lives at <https://github.com/alkipp/stats>.
+
+See [`THIRD-PARTY.md`](THIRD-PARTY.md) and [`LICENSE`](LICENSE) for the scripts and docs of this repository.

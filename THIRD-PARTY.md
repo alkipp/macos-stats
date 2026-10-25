@@ -12,6 +12,10 @@
 
 The image is redistributed purely as an installation medium for a single device. All rights to the app remain with the author; this repository does not modify it and ships no source code from it.
 
+## Vendored source
+
+`upstream/` contains the unmodified source tree of the same tag (`v3.0.23`, commit `5cf09a8c`), exported with `git archive`. Copyright and MIT license of the upstream project apply; see `upstream/LICENSE` and [`docs/upstream.md`](docs/upstream.md). Fork for upstream work: <https://github.com/alkipp/stats>.
+
 ## License of this repository
 
 Scripts and documentation are MIT licensed, see [`LICENSE`](LICENSE). That license does not extend to the Stats application in `dist/`; the author's license applies there.
