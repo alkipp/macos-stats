@@ -22,12 +22,20 @@ jobs:
           echo "repo=$(cat VERSION)" >> "$GITHUB_OUTPUT"
           echo "app=$(grep -oE '^APP_VERSION="[^"]+"' install.sh | cut -d'"' -f2)" >> "$GITHUB_OUTPUT"
 
+      - name: Select the image of this version
+        id: img
+        run: |
+          set -euo pipefail
+          file="dist/stats-${{ steps.v.outputs.app }}-macos-stats-${{ steps.v.outputs.repo }}.dmg"
+          test -f "${file}" || { echo "no image for this version: ${file}"; exit 1; }
+          echo "path=${file}" >> "$GITHUB_OUTPUT"
+
       - name: Checksums
         run: |
           set -euo pipefail
-          cd dist
-          sha256sum -- *.dmg > SHA256SUMS.txt
-          cat SHA256SUMS.txt
+          file="${{ steps.img.outputs.path }}"
+          sha256sum -- "$file"
+          ( cd dist && sha256sum -- "$(basename "$file")" > SHA256SUMS.txt && cat SHA256SUMS.txt )
 
       - name: Create release
         uses: softprops/action-gh-release@v3
@@ -38,7 +46,7 @@ jobs:
 
             Repository version: ${{ steps.v.outputs.repo }}. See `CHANGELOG.md` for what changed.
           files: |
-            dist/*.dmg
+            ${{ steps.img.outputs.path }}
             dist/SHA256SUMS.txt
           generate_release_notes: true
           fail_on_unmatched_files: true
