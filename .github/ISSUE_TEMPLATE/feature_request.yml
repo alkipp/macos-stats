@@ -1,0 +1,30 @@
+name: Feature request
+description: A module key, script option or documentation change you would like to see
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is missing
+      description: Describe the gap, not only the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Installer scripts
+        - Documentation
+        - Module keys
+        - Repository automation
+        - Other
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

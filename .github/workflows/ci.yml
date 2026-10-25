@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scripts:
+    name: Scripts and docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Shell syntax
+        run: bash -n install.sh uninstall.sh
+
+      - name: ShellCheck
+        run: shellcheck --version && shellcheck install.sh uninstall.sh
+
+      - name: Pinned installer matches the shipped image
+        run: |
+          set -euo pipefail
+          version="$(grep -oE '^VERSION="[^"]+"' install.sh | cut -d'"' -f2)"
+          sha="$(grep -oE '^SHA256="[^"]+"' install.sh | cut -d'"' -f2)"
+          echo "installer pins version ${version} with ${sha}"
+          test -f "dist/stats-${version}.dmg" || { echo "shipped image missing"; exit 1; }
+          echo "${sha}  dist/stats-${version}.dmg" | sha256sum -c -
+
+      - name: Workflow lint
+        uses: raven-actions/actionlint@v2
+
+      - name: Markdown lint
+        run: npx --yes markdownlint-cli2 "*.md" "docs/*.md"
+
+      - name: Documentation links are local
+        run: |
+          set -euo pipefail
+          if grep -rn "](/.workspace\|](/Users\|](/home" --include="*.md" .; then
+            echo "absolute local paths in documentation"; exit 1
+          fi
