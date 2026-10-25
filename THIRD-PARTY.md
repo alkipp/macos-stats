@@ -11,3 +11,7 @@
 - Signatur: `Developer ID Application: Serhiy Mytrovtsiy (RP2S87B72W)`, notarisiert
 
 Das Image wird hier ausschließlich als Installationsmedium für ein eigenes Gerät weitergegeben. Rechte an der App liegen beim Autor; dieses Repo ändert sie nicht und enthält keinen Quellcode daraus.
+
+## Lizenz dieses Repos
+
+Skripte und Dokumentation stehen unter MIT, siehe [`LICENSE`](LICENSE). Diese Lizenz erstreckt sich nicht auf die Anwendung Stats in `dist/`; dort gilt die Lizenz des Autors.
