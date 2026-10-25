@@ -4,7 +4,7 @@
 set -euo pipefail
 
 APP_VERSION="3.0.23"
-REPO_VERSION="1.1.0"
+REPO_VERSION="1.2.0"
 APP_SHA256="016517d559251f486aa0a47549de34c7dff56102392fa6273a58b0b2b815f392"
 APP="/Applications/Stats.app"
 DOMAIN="eu.exelban.Stats"

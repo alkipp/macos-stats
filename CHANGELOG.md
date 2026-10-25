@@ -4,6 +4,16 @@ All notable changes to this repository. Format based on [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-25
+
+### Added
+
+- **Release retention**: after publishing, the workflow deletes all but the five newest releases, so the downloadable images do not pile up. Tags are kept as history.
+
+### Notes
+
+- The legacy release `v3.0.23` (the pre-scheme naming, same image) was removed; its tag stays for traceability.
+
 ## [1.1.0] - 2026-10-25
 
 ### Added
